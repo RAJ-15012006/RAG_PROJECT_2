@@ -474,7 +474,7 @@ if question := st.chat_input("Ask about the Transformer paper..."):
     </div>""", unsafe_allow_html=True)
 
     try:
-        docs = retriever.get_relevant_documents(question)
+        docs = retriever.invoke(question)
         sources = sorted(set(doc.metadata.get("page", 0) + 1 for doc in docs))
         answer = chain.invoke(question)
 
