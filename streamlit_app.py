@@ -420,7 +420,7 @@ def load_rag():
     vectorstore = Chroma.from_documents(chunks, embedding=embeddings)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
     groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
-    llm = ChatGroq(model="llama3-8b-8192", api_key=groq_api_key)
+    llm = ChatGroq(model="llama-3.3-70b-versatile", api_key=groq_api_key)
     prompt = ChatPromptTemplate.from_messages([
         ("system", (
             "You are an expert AI research assistant specializing in the 'Attention Is All You Need' paper. "
