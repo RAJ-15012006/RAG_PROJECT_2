@@ -2,6 +2,17 @@
 .streamlit/secrets.toml
 __pycache__/
 *.pyc
+*.pyo
 venv/
 clean_venv/
 backend/data/chroma_db/
+backend/app.log
+app/
+*.ipynb
+env
+iStock-1976099664.jpg
+render.yaml
+.next/
+node_modules/
+frontend/.next/
+frontend/node_modules/
